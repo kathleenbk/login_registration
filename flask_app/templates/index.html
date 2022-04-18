@@ -27,7 +27,7 @@
                 <h2>Register</h2>
 
                 <!-- Get error messages -->
-                {% with messages = get_flashed_messages() %}     <!-- declare a variable called messages -->
+                {% with messages = get_flashed_messages(category_filter=['register']) %}     <!-- declare a variable called messages -->
                     {% if messages %}                            <!-- check if there are any messages -->
                         <h2>ERROR</h2>
                         {% for message in messages %}            <!-- loop through the messages -->
@@ -68,7 +68,7 @@
                 <h3>Login</h3>
 
                 <!-- Get error messages -->
-                {% with messages = get_flashed_messages() %}     <!-- declare a variable called messages -->
+                {% with messages = get_flashed_messages(category_filter=['login']) %}     <!-- declare a variable called messages -->
                     {% if messages %}                            <!-- check if there are any messages -->
                     <h2>ERROR</h2>
                         {% for message in messages %}            <!-- loop through the messages -->

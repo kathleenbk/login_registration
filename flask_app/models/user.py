@@ -56,15 +56,15 @@ class User:
         is_valid = True
         if len(user['first_name'])< 2:
             is_valid = False
-            flash("First name must be at least two characters.")
+            flash("First name must be at least two characters.","register")
         if len(user['last_name'])< 2:
             is_valid = False
-            flash("Last name must be at least two characters.")
+            flash("Last name must be at least two characters.","register")
         if not EMAIL_REGEX.match(user['email']): 
             flash("Invalid email address!")
             is_valid = False
         if len(user['password'])< 8:
-            flash("Password must be at least eight characters.")
+            flash("Password must be at least eight characters.","register")
             is_valid = False
         if user['confirm_password'] != user['password']:
             flash("Passwords do not match.")
